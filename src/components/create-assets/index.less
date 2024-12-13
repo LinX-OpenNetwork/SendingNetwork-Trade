@@ -1,0 +1,426 @@
+.create_assets_wrapper {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  .assets_title {
+    margin-top: 30px;
+    padding: 0 20px;
+    color: var(--color-text-sw-2-2);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .assets_add {
+      cursor: pointer;
+      border-radius: 39px;
+      background: var(--color-bg-sw-2);
+      color: var(--color-text-sw-2);
+      font-size: 14px;
+      font-weight: 510;
+      padding: 5px 12px 5px 8px;
+      :global {
+        .anticon {
+          margin-right: 5px;
+        }
+      }
+      &:hover {
+        background: var(--color-primary);
+      }
+    }
+  }
+  .assets_content {
+    overflow: auto;
+    padding-bottom: 160px;
+    margin-top: 12px;
+    .token_list {
+      padding: 0 15px;
+    }
+    .nft_list {
+      .list_item {
+        height: 100px;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 16px;
+        background-color: var(--color-bg-sw-2);
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .list_item_info {
+          overflow: hidden;
+          padding-right: 20px;
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .list_item_img {
+            width: 100px;
+            height: 100px;
+            border-radius: 16px;
+            margin-right: 10px;
+            object-fit: cover;
+          }
+          .list_item_detail {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            .info_name_tag {
+              font-weight: 500;
+              font-size: 12px;
+              color: #babbbe;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .info_name {
+              font-weight: 700;
+              font-size: 24px;
+              color: var(--color-text-sw-2-3);
+              line-height: 35px;
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .info_contract_value {
+              font-weight: 400;
+              font-size: 12px;
+              color: #8372ff;
+              word-break: break-all;
+              line-height: 13px;
+            }
+          }
+        }
+        .delete_btn {
+          width: 20px;
+          height: 100%;
+          padding-top: 10px;
+          margin-right: 10px;
+          display: flex;
+          cursor: pointer;
+          justify-content: flex-end;
+          color: var(--color-primary);
+          :global {
+            .anticon-close-circle {
+              cursor: pointer;
+              font-size: 20px;
+              color: #c44848;
+            }
+          }
+        }
+      }
+    }
+    .error_item {
+      padding: 0 20px;
+      .in_error_msg {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #ff6161;
+        margin-top: 10px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+        cursor: pointer;
+        svg {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+.token_item_input_wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  background: var(--color-bg-sw-2);
+  color: var(--color-text-sw-2-3);
+  border: 2px solid transparent;
+  .token_item_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .token_item_input {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .item_input_title {
+        cursor: pointer;
+        // color: #babbbe;
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .token_name_icon {
+          margin-right: 8px;
+          img {
+            width: 48px;
+            height: 48px;
+            border: none;
+          }
+          :global {
+            .token_empty_icon {
+              width: 48px;
+              height: 48px;
+              .chain_icon {
+                width: 18px;
+                height: 18px;
+                border: 1px solid var(--color-bg-sw-3);
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+        .token_change {
+          color: #babbbe;
+          margin-left: 6px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          svg {
+            path {
+              fill: #babbbe;
+            }
+          }
+          &.upOutArrow {
+            svg {
+              transform: rotate(180deg);
+              color: var(--color-primary);
+            }
+          }
+          &.downOutArrow {
+            svg {
+              transform: rotate(0deg);
+              color: var(--color-primary);
+            }
+          }
+        }
+        .token_symbol {
+          font-size: 18px;
+          font-weight: 590;
+          max-width: 120px;
+          text-align: center;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .input {
+        flex: 1;
+        color: var(--color-text-sw-2);
+      }
+      :global {
+        .adm-input-element {
+          font-weight: 700;
+          font-size: 26px;
+          text-align: right;
+          ime-mode: disabled;
+          font-family: 'Number_DIN';
+          // color: var(--color-text-sw-2-4);
+          color: var(--color-text-sw-2-3);
+        }
+      }
+    }
+  }
+  .token_item_balance {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-text-sw-2-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    .warning {
+      color: #ff6161;
+    }
+  }
+  .token_item_container {
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+  }
+  .token_right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .token_right_name {
+      display: flex;
+      align-items: center;
+      .token_right_name_info {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .delete_btn {
+    width: 20px;
+    margin-left: 20px;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    color: var(--color-primary);
+    :global {
+      .anticon-close-circle {
+        cursor: pointer;
+        font-size: 20px;
+        color: #c44848;
+      }
+    }
+  }
+  .token_item_change {
+    cursor: pointer;
+    color: #babbbe;
+    margin-right: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+  &:focus,
+  &:has(input:focus),
+  &:hover,
+  &.active {
+    border: 2px solid var(--color-primary);
+  }
+}
+.token_item_select {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: var(--color-bg-sw-2);
+  color: var(--color-text-sw-2-3);
+  border-radius: 16px;
+  height: 80px;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  border: 2px solid transparent;
+  align-items: center;
+  &:focus,
+  &:hover {
+    border: 2px solid var(--color-primary);
+  }
+  .token_item_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .item_input_title {
+      // color: #babbbe;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .token_name_icon {
+        margin-right: 8px;
+        img {
+          width: 48px;
+          height: 48px;
+          border: none;
+        }
+        :global {
+          .token_empty_icon {
+            width: 48px;
+            height: 48px;
+            .chain_icon {
+              width: 18px;
+              height: 18px;
+              border: 1px solid var(--color-bg-sw-3);
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      .token_right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .token_symbol {
+          font-size: 18px;
+          font-weight: 590;
+          max-width: 120px;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .token_item_balance {
+          font-weight: 400;
+          font-size: 12px;
+          color: var(--color-text-sw-2-2);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 20px;
+          .warning {
+            color: #ff6161;
+          }
+        }
+      }
+    }
+  }
+  .token_item_change {
+    cursor: pointer;
+    color: #babbbe;
+    margin-right: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    svg {
+      path {
+        fill: #babbbe;
+      }
+    }
+    &.upOutArrow {
+      svg {
+        transform: rotate(180deg);
+        color: var(--color-primary);
+      }
+    }
+    &.downOutArrow {
+      svg {
+        transform: rotate(0deg);
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+.token_list_loading {
+  height: 78px;
+  border-radius: 16px;
+  background: var(--color-bg-sw-2);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  .right {
+    margin-left: 20px;
+  }
+  .loading_rect_samll1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+  }
+  .loading_row2_cell3 {
+    height: 25px;
+    width: 150px;
+    border-radius: 6px;
+  }
+  .loading_row1_cell1 {
+    height: 15px;
+    width: 80px;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+}

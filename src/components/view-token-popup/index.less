@@ -1,0 +1,118 @@
+.view_token_popup_container {
+  .main_content {
+    min-height: 10rem;
+    max-height: 50vh;
+    overflow: auto;
+    .list_content {
+      margin: 0 20px;
+      .list_item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        border-radius: 10px;
+        background-color: var(--color-bg-sw-2-hover-1);
+        margin-bottom: 10px;
+        padding: 10px;
+        .item_name {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .item_icon {
+            img {
+              width: 42px;
+              height: 42px;
+              border-radius: 0.5rem;
+              margin-right: 10px;
+            }
+            .chain_icon {
+              width: 16px;
+              height: 16px;
+              border: 1px solid var(--color-bg-sw-3);
+              border-radius: 50%;
+            }
+          }
+        }
+        .name_info {
+          flex: 1;
+          overflow: hidden;
+          .title {
+            font-weight: 400;
+            font-size: 12px;
+            color: var(--color-text-sw-2);
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .value {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 30px;
+            color: var(--color-text-sw-2-3);
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          &.token {
+            .title {
+              font-weight: 700;
+              font-size: 24px;
+              color: var(--color-text-sw-2-3);
+              line-height: 30px;
+            }
+            .value {
+              font-weight: 400;
+              font-size: 12px;
+              color: var(--color-text-sw-2);
+            }
+          }
+        }
+      }
+    }
+
+    .container2 {
+      padding: 0 20px;
+      flex: 1;
+      overflow: auto;
+      .record_item {
+        cursor: pointer;
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #353131;
+        .user_container {
+          display: flex;
+          align-items: center;
+          .name_info {
+            margin-left: 11px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title {
+              font-weight: 500;
+              font-size: 14px;
+              color: var(--color-text-sw-2-3);
+            }
+            .sub {
+              font-weight: 500;
+              font-size: 12px;
+              color: #999;
+            }
+          }
+        }
+        .value_container {
+          font-weight: 500;
+          font-size: 12px;
+          color: var(--color-primary);
+          span {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+}

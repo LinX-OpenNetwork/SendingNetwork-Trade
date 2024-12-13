@@ -1,0 +1,164 @@
+.participants_wrapper {
+  // background: #37383d;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .search_box {
+    height: 48px;
+    margin-bottom: 0.56rem;
+    padding: 0 20px;
+  }
+  // .item_input {
+  //   cursor: pointer;
+  //   margin: 0 20px 10px 20px;
+  //   background: #202225;
+  //   border-radius: 10px;
+  //   padding: 0 12px;
+  //   height: 48px;
+  //   line-height: 48px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   .item_input_title {
+  //     display: flex;
+  //     align-items: center;
+  //     font-weight: 400;
+  //     font-size: 14px;
+  //     color: #fff;
+  //     .token_name_icon {
+  //       margin-right: 8px;
+  //       img {
+  //         width: 24px;
+  //         height: 24px;
+  //       }
+  //     }
+  //   }
+  //   .item_input_action {
+  //     color: #999;
+  //   }
+  // }
+  .content_list {
+    flex: 1;
+    overflow: auto;
+    .member_item {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      .member_item_content {
+        width: 100%;
+        border-bottom: 1px solid var(--color-border-sw-2-1);
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        .item_content_container {
+          flex: 1;
+          padding-left: 15px;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          width: 100%;
+          .item_content_name {
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            .name_title {
+              font-weight: 500;
+              font-size: 16px;
+              color: var(--color-text-sw-2-3);
+              display: flex;
+              align-items: center;
+            }
+            .title_value {
+              word-break: keep-all;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .external_tag {
+              padding: 0 5px;
+              color: #fc774b;
+              font-size: 12px;
+              font-weight: 400;
+              border-radius: 100px;
+              line-height: 16px;
+              border: 1px solid #fc774b;
+              margin-left: 5px;
+              flex: 1;
+            }
+            .name_sub {
+              font-weight: 400;
+              font-size: 14px;
+              color: var(--color-text-sw-2-6);
+            }
+          }
+        }
+        .member_item_input {
+          display: flex;
+          align-items: center;
+          background-color: var(--color-bg-sw-5);
+          border-radius: 10px;
+          width: 134px;
+          height: 48px;
+          padding: 0 10px;
+          border: 1px solid transparent;
+          .adm-input {
+            padding-right: 5px;
+            font-weight: 500;
+            font-size: 16px;
+          }
+          .adm-input-element {
+            color: var(--color-text-sw-2-3);
+          }
+          .item_input_extra {
+            font-weight: 400;
+            font-size: 12px;
+            color: #babbbe;
+          }
+          &:hover,
+          &:has(input:focus) {
+            border: 1px solid var(--color-primary);
+          }
+        }
+      }
+      .member_item_tip {
+        color: #979797;
+        font-size: 11.5px;
+        font-weight: 400;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: -5px;
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
+  .footer {
+    padding: 20px;
+    .checkbox_all_btn {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 11px;
+      color: var(--color-text-sw-8);
+      .ant-checkbox-wrapper {
+        margin-right: 14px;
+        color: var(--color-text-sw-2-3);
+        display: inline-flex;
+        align-items: baseline;
+      }
+    }
+  }
+}

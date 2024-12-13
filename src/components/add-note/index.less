@@ -1,0 +1,38 @@
+.note_wrapper {
+  .note_content {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-aide);
+    svg {
+      margin-right: 5px;
+      margin-bottom: -1px;
+    }
+    font-size: 14px;
+    font-weight: 500;
+    span {
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    &:hover {
+      svg path {
+        fill: var(--color-primary);
+      }
+    }
+    .note_text {
+      color: #979797;
+      font-size: 13px;
+      word-break: break-word;
+      font-weight: normal;
+      span {
+        color: var(--color-primary);
+        font-size: 14px;
+        font-weight: 500;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

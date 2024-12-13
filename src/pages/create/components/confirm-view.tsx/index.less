@@ -1,0 +1,289 @@
+.confirm_view_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 60px);
+  .title_item {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .title_text {
+      color: var(--color-text-sw-2-3);
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .title_value {
+      color: var(--color-text-sw-2);
+      font-size: 12px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 5px;
+      }
+      span {
+        font-weight: 500;
+        color: var(--color-text-sw-2-3);
+      }
+    }
+    .wallet_value {
+      border-radius: 39px;
+      background: var(--color-bg-sw-main);
+      padding: 3px 8px 3px 3px;
+      display: flex;
+      align-items: center;
+      color: var(--color-text-sw-2-7);
+      // .text {
+      //   color: var(--color-text-sw-6);
+      //   font-size: 11px;
+      //   font-weight: 500;
+      // }
+      .chain_icon {
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+      }
+      :global {
+        .user_avatar {
+          margin-right: 5px;
+        }
+        .user_avatar--inner {
+          font-size: 12px;
+        }
+      }
+    }
+    .in_error_msg {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ff6161;
+      margin-top: 10px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+      cursor: pointer;
+      svg {
+        margin-left: 4px;
+      }
+    }
+  }
+  .send_to_item {
+    margin: 10px 0;
+  }
+  .selected_title {
+    padding: 0 20px;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    color: #babbbe;
+    font-size: 12px;
+    font-weight: 400;
+    svg {
+      margin-right: 5px;
+    }
+    .value {
+      font-weight: 600;
+      color: var(--color-primary);
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+  .selected_content {
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .list {
+      padding: 10px 20px 20px 20px;
+      flex: 1;
+      overflow: auto;
+    }
+    .record_item {
+      height: 64px;
+      border-radius: 10px;
+      padding: 11px;
+      background: var(--color-bg-sw-2-hover-1);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .record_item_icon {
+        margin-right: 10px;
+        img {
+          width: 42px;
+          height: 42px;
+        }
+        :global {
+          .token_empty_icon {
+            .nft_default_icon {
+              width: 42px;
+              height: 42px;
+              border-radius: 8px;
+            }
+            .chain_icon {
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              border-color: var(--color-bg-sw-3);
+            }
+          }
+        }
+      }
+      .record_item_info {
+        flex: 1;
+        overflow: hidden;
+        .record_value {
+          color: var(--color-text-sw-2-3);
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+          word-break: keep-all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .record_price_value {
+          color: #999;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      .record_item_approve {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--color-text-sw-2-3);
+        svg {
+          margin-right: 5px;
+          color: var(--color-primary);
+        }
+        :global {
+          .anticon {
+            margin-right: 5px;
+          }
+        }
+        .authed {
+          display: flex;
+          align-items: center;
+          color: #0abf52;
+        }
+      }
+    }
+  }
+  .action {
+    padding: 20px;
+    .action_loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .action_loading_text {
+        color: var(--color-text-sw-2);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 9px;
+        display: flex;
+        align-items: center;
+        .retry_btn {
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--color-primary);
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          svg {
+            margin-left: 10px;
+            margin-right: 5px;
+            path {
+              fill: var(--color-primary);
+            }
+          }
+          &:hover {
+            font-size: 14px;
+            svg {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+      .action_loading_btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        background: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+      }
+    }
+    .error_msg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff6161;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+.checkout_modal {
+  backdrop-filter: blur(13.5914px);
+  border-radius: 20px;
+  &.adm-modal-body {
+    padding-top: 40px;
+  }
+  .adm-modal-content {
+    font-weight: 400;
+    font-size: 14px;
+    color: #babbbe;
+    text-align: center;
+    padding: 0 20px 20px;
+    .checkout_modal_content {
+      .content_edit {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+        .content_title {
+          font-weight: 400;
+          font-size: 14px;
+          color: #babbbe;
+        }
+      }
+    }
+  }
+  .adm-modal-footer {
+    padding: 8px 20px 20px;
+    .checkout_modal_btn {
+      height: 48px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #37b8af 100%);
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      border: none;
+      padding: 0;
+    }
+    .checkout_modal_btn_text {
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 16px;
+      color: #babbbe;
+      margin-bottom: 12px;
+    }
+  }
+}

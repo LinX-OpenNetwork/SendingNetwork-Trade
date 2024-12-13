@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 22</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7.1.1-打开钱包弹窗" transform="translate(-546.000000, -253.000000)">
+            <g id="编组-22" transform="translate(546.000000, 253.000000)">
+                <circle id="椭圆形" fill="#627EEA" cx="26" cy="26" r="26"></circle>
+                <g id="ethereum-eth-logo" transform="translate(14.000000, 5.000000)" fill-rule="nonzero">
+                    <polygon id="paths" fill="#C0CBF6" points="12.4963346 0 12.2231855 0.927814679 12.2231855 27.8484644 12.4963346 28.1209761 24.9923505 20.7344748"></polygon>
+                    <polygon id="paths" fill="#FFFFFF" points="12.4963346 0 0 20.7344748 12.4963346 28.1209761 12.4963346 15.0544386"></polygon>
+                    <polygon id="paths" fill="#C0CBF6" points="12.4963346 30.4868876 12.3423894 30.6746178 12.3423894 40.264161 12.4963346 40.7135663 25 23.104211"></polygon>
+                    <polygon id="paths" fill="#FFFFFF" points="12.4963346 40.7135663 12.4963346 30.4868876 0 23.104211"></polygon>
+                    <polygon id="paths" fill="#8197EE" points="12.4963346 28.1209761 24.9923505 20.7344748 12.4963346 15.0544386"></polygon>
+                    <polygon id="paths" fill="#C0CBF6" points="0 20.7344748 12.4963346 28.1209761 12.4963346 15.0544386"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

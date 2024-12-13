@@ -1,0 +1,30 @@
+.title_menu_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  .menus {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-text-sw-2-3);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      margin-left: 6px;
+    }
+    &.upOutArrow {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &.downOutArrow {
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
