@@ -142,10 +142,10 @@ export async function getTokenIsApprove(token: TokenSelector, fromAddress: strin
       fromAddress,
       token?.chainId
     );
-    // console.log('needsApproveRes1=', needsApproveRes);
+    console.log('needsApproveRes1=', needsApproveRes);
   } else {
     needsApproveRes = false;
-    // console.log('needsApproveRes2=', needsApproveRes);
+    console.log('needsApproveRes2=', needsApproveRes);
   }
 
   return needsApproveRes;

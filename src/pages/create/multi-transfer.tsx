@@ -238,7 +238,7 @@ const MultipleTransferPage = () => {
         currentWallet?.chainId,
         gasPriceCon
       );
-      console.log('needsApproveRes1=', needsApproveRes);
+      console.log('contract needsApproveRes1222=', needsApproveRes);
       if (needsApproveRes) {
         await EthWeb3Service.approve(
           service,

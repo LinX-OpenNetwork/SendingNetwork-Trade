@@ -403,6 +403,7 @@ const CollectionConfirmView = ({ visible }: any) => {
     //approve
     for (let item of tokensFiterChain) {
       const isNeedApproved = await getTokenIsApprove(item, fromAddress);
+      console.log('contract isNeedApproved', isNeedApproved);
       if (isNeedApproved) {
         let tradeAmount = getTokenBigNumberAmount(Number(item?.value), item.decimals);
         try {

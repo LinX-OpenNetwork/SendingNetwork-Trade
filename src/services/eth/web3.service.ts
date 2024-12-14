@@ -67,7 +67,11 @@ export class EthWeb3Service {
       console.error('Empty contract address', chainId);
       return;
     }
+    console.log('contract transferAddress',"address",address,"transferAddress", transferAddress,account,tradeAmount,gasPriceCon);
+
     if (type === 1) {
+      console.log('contract ERC20 transferAddress', "address",address,transferAddress,gasPriceCon,"account",account,transferAddress);
+
       const allowance = await contract.ERC20(address, gasPriceCon).methods.allowance(account, transferAddress).call();
       if (tradeAmount) {
         let currentAllowance = BigNumber.from(allowance);
@@ -119,7 +123,7 @@ export class EthWeb3Service {
     let func;
     const transferAddress = this.getTransferAddress(chainId);
     if (!transferAddress || transferAddress === '') {
-      console.error('Empty contract address', chainId);
+      console.error('contract Empty contract address', chainId);
       return;
     }
     if (type === 1) {
@@ -139,7 +143,7 @@ export class EthWeb3Service {
     } else if (type === 3) {
       func = contract.ERC1155(address, gasPriceCon).methods.setApprovalForAll(transferAddress, true);
     }
-    console.log('approve-func', type, func);
+    console.log('contract approve-func',"type", type,func,"address",address,"gasPriceCon",gasPriceCon);
     await this.sendTx(
       func,
       account,

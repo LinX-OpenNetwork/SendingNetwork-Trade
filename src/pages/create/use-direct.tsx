@@ -681,10 +681,12 @@ export const useDirectCreate = () => {
 
       const service = new EthContractService(ethWeb3);
       let contractAddress: string = signListTemp[signIndexParam]?.nftInfo?.address || '';
+      console.log('handleApprovalsignListTemp[signIndexParam]?.nftInfo?', signListTemp[signIndexParam]?.nftInfo);
+
       if (!contractAddress) {
         clearSpendingTime(false);
         updateState({ createBtnLoading: false });
-        message.error('contract address is empty!');
+        message.error('contract contract address is empty!');
         return;
       }
 
